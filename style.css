@@ -68,3 +68,27 @@ header p {
     border: 4px solid #0051a2;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+.navbar {
+    margin: 15px auto 5px auto;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+/* สไตล์ของปุ่มลิงก์ */
+.nav-link {
+    color: #ffffff !important;
+    background-color: rgba(255, 255, 255, 0.15);
+    text-decoration: none;
+    font-size: 0.95rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+/* เวลาเมาส์ชี้ หรือปุ่มหน้าปัจจุบัน */
+.nav-link:hover, .nav-link.active {
+    color: #0051a2 !important;
+    background-color: #ffffff;
+}
