@@ -1,4 +1,6 @@
-/* 1. จัดการพื้นฐานดึงสีนวล Warm Minimal ผสมโทนฟ้า */
+/* ==========================================================================
+   1. จัดการพื้นฐานและธีมสี (Warm Minimal + Luxury Navy)
+   ========================================================================== */
 body {
     background-color: #F4F7F9; /* สีพื้นหลังขาวอมฟ้าละมุนตา */
     margin: 0;
@@ -8,20 +10,22 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
-/* 2. แถบนำทางโปร่งตา ปรับโลโก้ PS ใหญ่ขึ้น ขยับห่างจากขอบจอสวยงาม */
+/* ==========================================================================
+   2. แถบนำทาง (NAV BAR) - โลโก้ PS ตัวใหญ่ คมชัด สีกรมท่าเข้ม
+   ========================================================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 40px 60px; /* เพิ่มระยะห่างบนล่างซ้ายขวา */
+    padding: 40px 60px;
     background-color: transparent;
 }
 
 .nav-logo {
     font-family: 'Cormorant Garamond', serif;
-    font-size: 3.5rem !important; /* ขยายขนาดจากเดิมให้ใหญ่เต็มตา สะใจแจ๊คกี้เลยครับ */
-    font-weight: 700 !important; /* ปรับเพิ่มความหนาของตัวอักษรให้เด่นชัดขึ้น */
-    color: #0B3C73 !important; /* เปลี่ยนเป็นสีกรมท่าน้ำเงินเข้มลักชู คมชัดกระแทกตา */
+    font-size: 3.5rem !important; /* ขนาดใหญ่เด่นชัดสง่างาม */
+    font-weight: 700 !important; /* ตัวหนาชัดเจน */
+    color: #0B3C73 !important; /* สีกรมท่าเข้มทรงพลัง */
     letter-spacing: 2px;
 }
 
@@ -47,7 +51,9 @@ body {
     border-bottom: 2px solid #075AAA;
 }
 
-/* 3. หน้าเนื้อหาหลักกว้างสไตล์โมเดิร์นกว้างขวาง */
+/* ==========================================================================
+   3. เลย์เอาต์หน้าหลัก (MAIN STRUCTURE)
+   ========================================================================== */
 main {
     max-width: 1200px;
     margin: 0 auto;
@@ -60,7 +66,9 @@ main {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* 4. HERO SECTION - แบ่งฝั่งซ้ายข้อความ ขวารูปภาพวงกลม */
+/* ==========================================================================
+   4. HERO SECTION - การจัดวางและโทนสีชื่อ (ลักชูเสมอกัน)
+   ========================================================================== */
 .hero-section {
     display: flex;
     align-items: center;
@@ -84,17 +92,18 @@ main {
     margin-bottom: 20px;
 }
 
+/* ปรับให้ชื่อและนามสกุลเป็นสีกรมท่าเข้มเสมอกัน สวยแพงแบบเรียบหรู */
 .hero-name {
-    font-family: 'Cormorant Garamond', serif;[cite: 1]
+    font-family: 'Cormorant Garamond', serif;
     font-size: 5rem;
-    font-weight: 300;
-    color: #1A1A1A;
+    font-weight: 400;
+    color: #0B3C73 !important; /* สีชื่อเข้มหรูหรา */
     line-height: 0.95;
     margin: 0 0 25px 0;
 }
 
 .hero-name .last-name {
-    color: #075AAA; /* สีนามสกุลคุมโทนฟ้าน้ำเงินลักชู */
+    color: #0B3C73 !important; /* สีนามสกุลเข้มเสมอกันตามใจสั่ง ไม่แตกแยก */
     font-weight: 400;
 }
 
@@ -114,7 +123,7 @@ main {
     margin-bottom: 40px;
 }
 
-/* ปุ่มกดสไตล์มินิมอล */
+/* ปุ่มกดมินิมอล */
 .hero-cta {
     display: flex;
     gap: 15px;
@@ -154,7 +163,9 @@ main {
     border-color: #075AAA;
 }
 
-/* 5. ฝั่งขวา: คุมขนาดกรอบวงกลมและรูปภาพโปรไฟล์แจ๊คเก่งให้เนียนกริบ */
+/* ==========================================================================
+   5. วงกลมกราฟิกและรูปภาพโปรไฟล์ (แก้ปัญหาผมโดนตัดขอบ)
+   ========================================================================== */
 .hero-visual {
     flex: 1;
     display: flex;
@@ -166,7 +177,7 @@ main {
     width: 380px;
     height: 380px;
     border-radius: 50%;
-    border: 1px dashed #CDDBE8; /* เส้นประล้อมรอบเพิ่มลูกเล่น */
+    border: 1px dashed #CDDBE8;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -180,14 +191,15 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* สั่งตัดขอบรูปภาพส่วนเกินให้เป็นวงกลมมน */
+    overflow: hidden; /* ตัดขอบให้เป็นวงกลมเนียน ๆ */
     box-shadow: inset 0 0 20px rgba(255,255,255,0.6);
 }
 
 .hero-profile-img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* คุมรูปถ่ายไม่ให้เบี้ยวหรือยืด */
+    object-fit: cover;
+    object-position: center 15%; /* สั่งขยับโฟกัสลงมาเพื่อโชว์ทรงผมครบถ้วน ไม่โดนตัดหัวแล้วครับแจ๊ค! */
     transition: transform 0.4s ease;
 }
 
@@ -196,9 +208,11 @@ main {
     cursor: pointer;
 }
 
-/* 6. ส่วนเนื้อหาไทม์ไลน์และการ์ดข้อมูลพาร์ทล่าง */
+/* ==========================================================================
+   6. ส่วนเนื้อหาข้อมูลด้านล่าง (TIMELINE / SKILLS / GOALS)
+   ========================================================================== */
 h2 {
-    font-family: 'Cormorant Garamond', serif;[cite: 1]
+    font-family: 'Cormorant Garamond', serif;
     font-size: 2.2rem;
     color: #1A1A1A;
     font-weight: 400;
@@ -236,7 +250,7 @@ h2 {
 }
 
 .skill-card h3, .goal-card h3 {
-    font-family: 'Cormorant Garamond', serif;[cite: 1]
+    font-family: 'Cormorant Garamond', serif;
     font-size: 1.5rem;
     font-weight: 500;
     margin: 10px 0 5px 0;

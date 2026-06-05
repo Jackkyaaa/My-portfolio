@@ -1,41 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects - Pittaya Samsalee</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Experience &amp; Achievements — Pittaya Samsalee</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Pittaya Samsalee</h1>
-    <nav class="navbar">
-      <!-- ไฮไลท์ปุ่ม Projects ให้เด่นเพราะอยู่หน้านี้ครับ Babe -->
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="projects.html" class="nav-link active">Projects</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>  
-    <p>Assistant Restaurant Manager</p>
-  </header>
+  <!-- NAV BAR -->
+  <nav class="navbar">
+    <div class="nav-logo">PS</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link">HOME</a></li>
+      <li><a href="projects.html" class="nav-link active">EXPERIENCE</a></li>
+      <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+  </nav>
 
   <main>
-    <section>
-      <h2>My Projects & Achievements</h2>
-      
-      <h3>1. Personal Portfolio Website</h3>
-      <p>Developed a responsive Multi-page portfolio website using HTML and CSS. Features custom modern typography, interactive layout, and hosted live on GitHub Pages.</p>
-      
-      <h3>2. Customer Service Excellence</h3>
-      <p>Implemented a new staff training program at The Lime Leaf, improving customer satisfaction scores and streamlining restaurant busy-hour operations.</p>
-      
-      <h3>3. Computer Science Studies</h3>
-      <p>Currently building foundational computing projects as part of the CertHE Computer Science curriculum at the University of Essex Online.</p>
+    <section class="skills-section" style="margin-top: 40px;">
+      <h2>My Projects &amp; Achievements</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <div class="timeline-date">PROJECT 01</div>
+          <h3>Personal Portfolio Website</h3>
+          <p class="company-name">Web Application Development Assignment</p>
+          <p>Developed a responsive, modern, multi-page portfolio website using semantic HTML5 and clean CSS layouts. Features tailored typography, dynamic interactive elements, and is successfully hosted live on GitHub Pages.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="timeline-date">ACHIEVEMENT 02</div>
+          <h3>Customer Service Excellence</h3>
+          <p class="company-name">The Lime Leaf — Basingstoke, UK</p>
+          <p>Successfully implemented a frontline training workflow for team members, significantly elevating guest satisfaction scores and streamlining service efficiency during high-volume weekend dining hours.</p>
+        </div>
+
+        <div class="skill-card">
+          <div class="timeline-date">EDUCATION 03</div>
+          <h3>Computer Science Studies</h3>
+          <p class="company-name">University of Essex Online</p>
+          <p>Actively engineering and presenting foundational computing projects as part of the formal academic curriculum, focusing on problem-solving, algorithmic thinking, and modern software paradigms.</p>
+        </div>
+
+      </div>
     </section>
   </main>
 
+  <footer class="footer">
+    <p>© 2026 Pittaya Samsalee. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
