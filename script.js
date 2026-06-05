@@ -1,8 +1,39 @@
-// ระบบตรวจสอบความถูกต้องของฟอร์มหน้า Contact (Dynamic Form Validation)
 document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.querySelector('form');
     
-    // ดักจับเหตุการณ์ถ้ามีฟอร์มในหน้านั้น ๆ
+    // ==========================================================================
+    // 📊 1. ANIMATED COUNTER SYSTEM (C.E. Years & Goal Numbers)
+    // ==========================================================================
+    const counters = document.querySelectorAll('.count-num');
+    
+    counters.forEach(counter => {
+        const updateCount = () => {
+            const target = +counter.getAttribute('data-target');
+            const count = +counter.innerText;
+            
+            // Adjust counting speed based on the target value magnitude
+            const speed = target > 100 ? 150 : 5; 
+            const increment = Math.ceil(target / speed);
+            
+            if (count < target) {
+                counter.innerText = count + increment;
+                setTimeout(updateCount, 15); 
+            } else {
+                // Pad single-digit goals with a leading zero for design consistency
+                if (target < 10) {
+                    counter.innerText = '0' + target;
+                } else {
+                    counter.innerText = target;
+                }
+            }
+        };
+        
+        updateCount();
+    });
+
+    // ==========================================================================
+    // ✉️ 2. CLIENT-SIDE FORM VALIDATION SYSTEM (Contact Page)
+    // ==========================================================================
+    const contactForm = document.querySelector('form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             const nameInput = document.getElementById('name');
@@ -12,13 +43,13 @@ document.addEventListener('DOMContentLoaded', function() {
             let isValid = true;
             let errorMessage = "";
 
-            // 1. ตรวจสอบช่องกรอกชื่อ
+            // Name Field Validation
             if (nameInput && nameInput.value.trim() === "") {
                 isValid = false;
                 errorMessage += "Please enter your name.\n";
             }
 
-            // 2. ตรวจสอบช่องอีเมล
+            // Email Field Validation via Regular Expression (Regex)
             if (emailInput) {
                 const emailValue = emailInput.value.trim();
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -31,16 +62,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
 
-            // 3. ตรวจสอบช่องข้อความ
+            // Message Field Validation
             if (messageInput && messageInput.value.trim() === "") {
                 isValid = false;
                 errorMessage += "Please write your message.";
             }
 
-            // ถ้าข้อมูลไม่ครบถ้วน ให้ระงับการส่งฟอร์มและแจ้งเตือนผู้ใช้ทันที
+            // Execute submission block or successful execution alert
             if (!isValid) {
-                event.preventDefault(); // หยุดการส่งฟอร์มไปหลังบ้าน
-                alert(errorMessage); // เด้งหน้าต่างแจ้งเตือนแบบเรียลไทม์
+                event.preventDefault();
+                alert(errorMessage);
             } else {
                 alert("Thank you, " + nameInput.value + "! Your message has been sent successfully.");
             }
