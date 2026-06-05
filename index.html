@@ -1,67 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pittaya Samsalee</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pittaya Samsalee — Portfolio</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header>
-    <h1>Pittaya Samsalee</h1>
-    <nav class="navbar">
-      <a href="index.html" class="nav-link active">Home</a>
-      <a href="projects.html" class="nav-link">Projects</a>
-      <a href="contact.html" class="nav-link">Contact</a>
-    </nav>
-    <p>Assistant Restaurant Manager</p>
-  </header>
-  
+  <!-- NAV BAR -->
+  <nav class="navbar">
+    <div class="nav-logo">PS</div>
+    <ul class="nav-links">
+      <li><a href="index.html" class="nav-link active">HOME</a></li>
+      <li><a href="projects.html" class="nav-link">EXPERIENCE</a></li>
+      <li><a href="contact.html" class="nav-link">CONTACT</a></li>
+    </ul>
+  </nav>
+
   <main>
-
-    <section>
-      <h2>About Me</h2>
-      <img src="profile.jpeg" alt="Pittaya Samsalee" class="profile-img">
-      <p>I have 6 years of experience in a busy restaurant in Basingstoke. 
-      I am currently an Assistant Manager at The Lime Leaf. I am hardworking, 
-      calm under pressure, and I love helping customers. I am also studying 
-      Computer Science online at the University of Essex. I want to bring my 
-      service skills to work as Experienced Cabin Crew.</p>
+    <!-- HERO SECTION (แบ่งฝั่งซ้ายข้อความ ขวารูปในวงกลมกราฟิกพรีเมียม) -->
+    <section class="hero-section">
+      <div class="hero-content">
+        <p class="hero-label">Based in Basingstoke, UK · Available Worldwide</p>
+        <h1 class="hero-name">Pittaya<br><span class="last-name">Samsalee</span></h1>
+        <p class="hero-tagline">CABIN CREW ASPIRANT &amp; BUSINESS ANALYST</p>
+        <p class="hero-desc">
+          An ambitious hospitality professional with 6 years of premium customer service experience spanning Thailand and the UK. 
+          Currently bridging front-line management expertise with technical computing and data insights to elevate business operations and airline passenger experiences.
+        </p>
+        <div class="hero-cta">
+          <a href="projects.html" class="btn btn-primary">VIEW EXPERIENCE</a>
+          <a href="contact.html" class="btn btn-outline">GET IN TOUCH</a>
+        </div>
+      </div>
+      
+      <!-- ฝั่งขวา: วงกลมกราฟิกโทนฟ้าละมุนพร้อมรูปโปรไฟล์สุดหล่อของแจ๊ค -->
+      <div class="hero-visual">
+        <div class="hero-circle-outer">
+          <div class="hero-circle">
+            <img src="profile.jpeg" alt="Pittaya Samsalee" class="hero-profile-img">
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Contact</h2>
-      <p>Phone: +44 7403 983785</p>
-      <p>Email: Pittaya.jackky@gmail.com</p>
-      <p>Address: 12 Westside Close, South Ham, Basingstoke, RG22 6LQ</p>
+    <!-- EXPERIENCE & EDUCATION TIMELINE (ประวัติจริง 100%) -->
+    <section class="skills-section">
+      <h2>Education &amp; Experience Timeline</h2>
+      <div class="skills-grid">
+        
+        <div class="skill-card">
+          <span class="timeline-date">2025 - PRESENT</span>
+          <h3>CertHE Computer Science</h3>
+          <p class="company-name">University of Essex Online, UK</p>
+          <p>Currently pursuing undergraduate studies in computing. Developing specialized skills in software foundations, responsive web architecture, and data analysis.[cite: 1]</p>
+        </div>
+
+        <div class="skill-card">
+          <span class="timeline-date">2019 - PRESENT</span>
+          <h3>Assistant Restaurant Manager / Hospitality Specialist</h3>
+          <p class="company-name">The Lime Leaf, Basingstoke, UK</p>
+          <p>Relocated to the UK in 2019 and immediately entered the competitive hospitality sector. Progressed into management, overseeing front-of-house teams, optimizing service flows, and mastering high-pressure crisis management.</p>
+        </div>
+
+        <div class="skill-card">
+          <span class="timeline-date">THAILAND PERIOD</span>
+          <h3>Economics Studies &amp; Customer Service Specialist</h3>
+          <p class="company-name">Ramkhamhaeng University &amp; SB Furniture, Thailand</p>
+          <p>Studied Economics at Ramkhamhaeng University while simultaneously developing high-end frontline sales, space consulting, and premium corporate communication skills at SB Furniture &amp; Design Square.[cite: 1]</p>
+        </div>
+
+        <div class="skill-card">
+          <span class="timeline-date">FOUNDATIONAL EDUCATION</span>
+          <h3>High School Graduate (M.6)</h3>
+          <p class="company-name">Secondary Education, Thailand</p>
+          <p>Completed high school in Thailand, establishing core communication strengths, cultural roots, and the initial drive to pursue international opportunities.</p>
+        </div>
+
+      </div>
     </section>
 
-    <section>
-      <h2>Work Experience</h2>
-      <h3>The Lime Leaf, Basingstoke</h3>
-      <p>Assistant Restaurant Manager — 2019 to Present</p>
-      <p>Managing daily restaurant operations, training new staff, 
-      and delivering excellent customer service.</p>
-      <h3>SB Furniture, Thailand</h3>
-      <p>Sales Executive — 2012 to 2018</p>
-      <p>Assisted customers and achieved sales targets while 
-      studying at Ramkhamhaeng University.</p>
+    <!-- CORE SKILLS SECTION -->
+    <section class="skills-section" style="margin-top: 60px;">
+      <h2>Core Skills &amp; Strengths</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>✦ Global Hospitality &amp; Leadership</h3>
+          <p>A proven 6+ year trajectory of dealing with high-end clientele and multicultural teams, from corporate retail in Thailand (SB) to restaurant management in the UK.</p>
+        </div>
+        <div class="skill-card">
+          <h3>⟡ Modern Frontend Web Development</h3>
+          <p>Designing interactive, accessible, and responsive user experiences using semantic HTML5, clean CSS layouts, and dynamic client-side JavaScript.[cite: 1]</p>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Education</h2>
-      <h3>University of Essex Online</h3>
-      <p>CertHE Computer Science — 2025 to Present</p>
-      <h3>Ramkhamhaeng University, Thailand</h3>
-      <p>Bachelor of Economics — 2012 to 2014 (Did not complete)</p>
-      <h3>Suwannaphum Pittayapaisarn School, Thailand</h3>
-      <p>High School Diploma — Graduated 2012</p>
+    <!-- CAREER GOALS SECTION (ล็อกเป้าหมายตามที่บรีฟล่าสุด) -->
+    <section class="goals-section" style="margin-top: 60px;">
+      <h2>Career Goals</h2>
+      <div class="goals-grid">
+        <div class="goal-card">
+          <div class="goal-number">01</div>
+          <h3>Cabin Crew (Flight Attendant)</h3>
+          <p>Aspiring to bring safety, warmth, and elite professional service excellence to the skies. Eager to represent world-class airlines and deliver exceptional passenger experiences at 35,000 feet.</p>
+        </div>
+        <div class="goal-card">
+          <div class="goal-number">02</div>
+          <h3>Business Analyst (BA)</h3>
+          <p>Aiming to leverage frontline hospitality insights and current technical computing knowledge to analyze business flows, optimize operations, and drive data-informed decisions in corporate environments.[cite: 1]</p>
+        </div>
+      </div>
     </section>
-
   </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>© 2026 Pittaya Samsalee. All rights reserved.[cite: 1]</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
