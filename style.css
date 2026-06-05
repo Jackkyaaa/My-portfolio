@@ -41,7 +41,7 @@ p {
 }
 
 header {  
-  background-color: #075AAA;  /* สีน้ำเงิน British Airways ✈️ */
+  background-color: #075AAA;  
   color: #ffffff;  
   padding: 40px;  
   border-radius: 8px;  
@@ -57,4 +57,14 @@ header p {
   color: #aaaaaa;  
   font-size: 18px;  
   margin: 5px 0 0 0;
+}
+.profile-img {
+    display: block;
+    margin: 20px auto;       
+    width: 180px;            
+    height: 180px;           
+    object-fit: cover;       
+    border-radius: 50%;      
+    border: 4px solid #0051a2;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
