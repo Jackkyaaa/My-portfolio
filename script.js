@@ -1,6 +1,18 @@
 document.addEventListener('DOMContentLoaded', function() {
     
     // ==========================================================================
+    // 📱 0. MOBILE HAMBURGER MENU SYSTEM
+    // ==========================================================================
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (hamburger && navLinks) {
+        hamburger.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+    }
+
+    // ==========================================================================
     // 📊 1. ANIMATED COUNTER SYSTEM (C.E. Years & Goal Numbers)
     // ==========================================================================
     const counters = document.querySelectorAll('.count-num');
@@ -10,7 +22,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
             
-            // Adjust counting speed based on the target value magnitude
             const speed = target > 100 ? 150 : 5; 
             const increment = Math.ceil(target / speed);
             
@@ -18,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 counter.innerText = count + increment;
                 setTimeout(updateCount, 15); 
             } else {
-                // Pad single-digit goals with a leading zero for design consistency
                 if (target < 10) {
                     counter.innerText = '0' + target;
                 } else {
@@ -31,9 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     // ==========================================================================
-    // ✉️ 2. CLIENT-SIDE FORM VALIDATION SYSTEM (Contact Page)
+    // ✉️ 2. CLIENT-SIDE FORM VALIDATION SYSTEM & LOCAL STORAGE
     // ==========================================================================
-    const contactForm = document.querySelector('form');
+    const contactForm = document.getElementById('contactForm');
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
             const nameInput = document.getElementById('name');
@@ -43,13 +53,11 @@ document.addEventListener('DOMContentLoaded', function() {
             let isValid = true;
             let errorMessage = "";
 
-            // Name Field Validation
             if (nameInput && nameInput.value.trim() === "") {
                 isValid = false;
                 errorMessage += "Please enter your name.\n";
             }
 
-            // Email Field Validation via Regular Expression (Regex)
             if (emailInput) {
                 const emailValue = emailInput.value.trim();
                 const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -62,17 +70,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
 
-            // Message Field Validation
             if (messageInput && messageInput.value.trim() === "") {
                 isValid = false;
                 errorMessage += "Please write your message.";
             }
 
-            // Execute submission block or successful execution alert
             if (!isValid) {
                 event.preventDefault();
                 alert(errorMessage);
             } else {
+                localStorage.setItem('lastMessage', nameInput.value);
                 alert("Thank you, " + nameInput.value + "! Your message has been sent successfully.");
             }
         });

@@ -9,7 +9,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Custom form spacing and layout styling for luxury theme consistency */
     .form-group { margin-bottom: 20px; text-align: left; }
     .form-group label { display: block; font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; margin-bottom: 8px; color: #2C3E50; }
     .form-control { width: 100%; padding: 14px; border: 1px solid #D1DFEC; border-radius: 4px; background-color: #FFFFFF; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; box-sizing: border-box; transition: all 0.3s ease; }
@@ -20,7 +19,6 @@
 </head>
 <body>
 
-  <!-- NAVIGATION BAR -->
   <nav class="navbar">
     <div class="nav-logo">PS</div>
     <ul class="nav-links">
@@ -28,23 +26,22 @@
       <li><a href="projects.html" class="nav-link">EXPERIENCE</a></li>
       <li><a href="contact.html" class="nav-link active">CONTACT</a></li>
     </ul>
+    <button class="hamburger" id="hamburger">&#9776;</button>
   </nav>
 
   <main>
     <h2>Contact Me</h2>
     
     <div class="contact-container">
-      <!-- Contact Information Card -->
       <div class="contact-info-card">
         <p style="margin: 0 0 10px 0;"><strong>Phone:</strong> +44 7403 983785</p>
         <p style="margin: 0 0 10px 0;"><strong>Email:</strong> Pittaya.jackky@gmail.com</p>
         <p style="margin: 0;"><strong>Location:</strong> Basingstoke, United Kingdom</p>
       </div>
 
-      <!-- Interactive Contact Form -->
       <div class="skill-card" style="margin-bottom: 60px;">
         <h3 style="margin-top: 0; margin-bottom: 25px; font-size: 1.8rem;">Send a Message</h3>
-        <form>
+        <form id="contactForm">
           <div class="form-group">
             <label for="name">YOUR NAME</label>
             <input type="text" id="name" class="form-control" placeholder="Enter your name">
@@ -65,6 +62,7 @@
 
   <footer class="footer">
     <p>© 2026 Pittaya Samsalee. All rights reserved.</p>
+    <p><a href="https://www.linkedin.com/in/pittaya-samsalee-a25119364" target="_blank" class="linkedin-link" style="color: #075AAA; text-decoration: none; font-weight: 600;">LinkedIn Profile</a></p>
   </footer>
 
   <script src="script.js"></script>

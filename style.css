@@ -19,6 +19,7 @@ body {
     align-items: center;
     padding: 40px 60px;
     background-color: transparent;
+    position: relative;
 }
 
 .nav-logo {
@@ -67,6 +68,17 @@ body {
 
 .nav-link:hover, .nav-link.active {
     color: #075AAA !important;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #0B3C73;
+    cursor: pointer;
+    padding: 0;
+    z-index: 100;
 }
 
 /* ==========================================================================
@@ -203,6 +215,7 @@ main {
     justify-content: center;
     align-items: center;
     position: relative;
+    /* สั่งให้กรอบประด้านนอกหมุนไปทางขวา 25 วินาที */
     animation: luxuryRotate 25s linear infinite; 
 }
 
@@ -221,7 +234,8 @@ main {
     align-items: center;
     overflow: hidden; 
     box-shadow: inset 0 0 20px rgba(255,255,255,0.6);
-    animation: counterRotate 25s linear infinite; 
+    /* สั่งหมุนสวนทางกลับไปทางซ้าย 25 วินาทีเท่ากัน เพื่อบล็อกให้รูปภาพตั้งตรงนิ่งสนิท 100% */
+    animation: counterRotate 25s linear infinite !important; 
 }
 
 @keyframes counterRotate {
@@ -317,26 +331,52 @@ h2 {
     letter-spacing: 1px;
 }
 
+.linkedin-link {
+    text-decoration: none;
+    color: #075AAA !important;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.linkedin-link:hover {
+    color: #0B3C73 !important;
+}
+
 /* ==========================================================================
-   8. MOBILE RESPONSIVE STYLES (Geared for Mobile Viewport Optimization)
+   8. MOBILE RESPONSIVE STYLES
    ========================================================================== */
 @media (max-width: 768px) {
     .navbar {
-        flex-direction: column;
+        flex-direction: row; 
         padding: 20px;
-        gap: 15px;
-        text-align: center;
+        justify-content: space-between;
     }
 
     .nav-logo {
         font-size: 2.5rem !important;
-        margin-bottom: 5px;
+        margin-bottom: 0;
     }
 
     .nav-links {
-        gap: 20px;
-        justify-content: center;
-        flex-wrap: wrap;
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        background-color: #F4F7F9;
+        padding: 20px;
+        box-shadow: 0 10px 20px rgba(7, 90, 170, 0.05);
+        gap: 15px;
+        z-index: 99;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block; 
     }
 
     .hero-section {
